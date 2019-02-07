@@ -1,0 +1,4 @@
+flask
+flask-ngrok
+pyscreenshot
+pillow
