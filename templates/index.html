@@ -4,6 +4,34 @@
   </head>
   <body>
     <h1>Screen Sharing</h1>
-    <img id="bg" src="{{ url_for('video_feed') }}">
+    <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+    <img width="100%" id="bg" src="{{ url_for('record_feed') }}">
   </body>
+
+  <script>
+  window.onload = function () {
+  
+  var seconds = 00; 
+  var tens = 00; 
+  var appendTens = document.getElementById("tens")
+  var appendSeconds = document.getElementById("seconds")
+  var Interval;
+  clearInterval(Interval);
+  Interval = setInterval(startTimer, 10);
+
+  function startTimer () {
+    tens++; 
+    if(tens < 9){ appendTens.innerHTML = "0" + tens; }
+    if (tens > 9){ appendTens.innerHTML = tens; } 
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+    if (seconds > 9){ appendSeconds.innerHTML = seconds; }
+  }
+}
+  </script>
 </html>
