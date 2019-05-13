@@ -5,6 +5,14 @@ It is a project that streams the screen image of the computer onto the web. At f
 ## Motivation
 I have a desktop computer at home. I was giving it some tasks. I just need their status in these tasks. I started this project for this.
 
+## How to install
+
+Very simple.
+
+```
+python install -r requirements.txt
+```
+
 ## I'm Use
 
 I got help from the `pyscreenshot` library to capture the screen. With Flask (!ILOVEFLASK) I made it a web application. I opened the external network with Ngrok.
